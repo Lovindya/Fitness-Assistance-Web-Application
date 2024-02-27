@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+header{
+    background: rgba(95, 94, 94, 0.8);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('main_header_background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 0px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px; 
+    margin-top: 5px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    }
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #adabab;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #DAA520;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(7, 7, 7);
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid black;
+    background: rgb(209, 179, 8);
+    transition: 1s;
+    
+}
+
+.df{
+    display: none;
+}
+
+.dfx{
+    display: none;
+}
+
+
+.signup {
+    padding: 1.1em 2.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #DAA520;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;   
+    text-decoration: none;
+    
+  }
+  
+.signup:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+   }
+
+.signup:hover {
+    transform: translateY(-1px);
+    background-color: #fff;
+   }
+
+
+/* ------------------importance--------------------------- */
+.importance{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.importance-col{
+    flex-basis: 31%;
+    background: #fffc5e;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.importance-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* ----------------about us----------------------- */
+
+.aboutUs{
+    margin: 50px auto;
+    background-image: url("aboutus_backgound.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.aboutUs h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+
+/* --------------comments-----------------*/
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fffc5e;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonials-col p{
+    padding: 0;
+}
+
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonials-col .fa{
+    color: rgb(66, 8, 17);
+}
+
+
+
+/* ------------call to action----------------- */
+.cta{
+    margin: 50px auto;
+    background-image: url("feedback_background.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+
+
+/* -----------------Footer----------------------- */
+.footer{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: #333;
+    color: #efefef;
+    display: flex;
+
+}
+
+.footer div{
+  text-align: center;
+  padding: 30px ;
+  
+}
+
+.col-2{
+  flex-grow: 2;
+  
+}
+
+.footer div h3{
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin: 0px 50px 10px 40px;
+}
+
+.col-1 a::after{
+  content:'';
+  width: 0%;
+  height: 2px;
+  background: #DAA520;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.col-1 a:hover::after{
+  width: 100%;
+}
+
+.newsletter input{
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+
+.newsletter button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+.newsletter button:hover{
+  background-color: #DAA520;
+  color: #000;
+  border-color: #333;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  font-size: 22px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #333;
+}
+
+.social-icons a:hover {
+  background-color: #DAA520;
+  
+}
+
+.editor {
+  color:  #fff;
+  text-decoration: none;
+  
+}
+
+.editor:hover{
+  color: #836400;
+}
+

@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+	background-image:url("");
+	background-position: center;
+    background-size: cover;
+	background-color:black;
+}
+p,h2{font-family:Sitka;
+	color:white;}
+	
+.topic{color:#DAA520;
+	font-size:40px;
+	font-family:Sitka Heading;
+	}
+	
+.about-us{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+	cursor: pointer;
+}
+	
+/* Utility stylings */
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    width: 88vw;
+    margin: 0 auto;
+}
+
+/*-----------our team------------- */
+.our-team{
+	background-position: center;
+    background-size: cover;
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+	background: rgba(95, 94, 94, 0.3);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.std-card{
+	flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.std-card:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.std-content{
+    background: var(--gray);
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+
+.std-img{
+    background: var(--white-light);
+    box-shadow: 0 0 20px 10px var(--white-light);
+    margin: auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+	padding: 20px 12px;
+}
+
+
+
+.std-img img{
+    transition: transform 0.6s ease;
+}
+.std-card:hover .std-img img{
+    transform: scale(1.1);
+}
+.std-card:hover .std-img{
+    background: var(--carribean-green);
+}
+.std-card:hover .std-info{
+    opacity: 1;
+}
+
+.std-info{
+    background: white;
+    padding: 1rem;	
+    justify-content: center;
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.std-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.std-no{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+	color: black;
+}

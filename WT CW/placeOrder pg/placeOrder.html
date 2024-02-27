@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> FitDynasty - place order </title>
+	<link rel="stylesheet" href="placeOrder.css">
+	<!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+<body>
+	<main>
+		<span id="result"></span>
+		<div class="wrapper">
+			<h2>Checkout</h2>
+			<form id="form-cart"  method="set">
+				<section class="order-sum">
+					<h4 class="form-title">Order summary</h4>
+					<p class="cart-checkout">Reference ID: <span id="ref-no">420000000000069</span></p>
+					<p class="cart-checkout">Amount of items in the cart : <span id="cart-count"></span></p>
+					<p class="cart-checkout">Subtotal : <span id="sub-total"></span></p>
+					<p class="cart-checkout">Delivery fee : <span id="deli-fee">$2.49</span></p>
+					<hr>
+					<p class="cart-checkout">Total Bill Amount : <span id="bill-amount">$0</span></p>
+				</section>
+			</form>
+		</div>
+		
+		<!--payment details-->
+		<div class="wrapper" style="margin-top: 1rem;">   
+			<form id="form-payment"  method="get">
+				<section class="payment-details">
+					<div class="input-group">
+						<div class="input-box">
+							<h4>Payment Details</h4>
+							<input type="radio" name="pay" class="radio" id="credit" checked>
+							<label for="credit"><span>
+								<i class='bx bx-credit-card'></i><i class='bx bxl-mastercard'></i><i class='bx bxl-visa'></i>  Credit Card</span></label>
+							<input type="radio" name="pay" class="radio" id="paypal">
+							<label for="paypal"><span>
+								<i class='bx bxl-paypal' ></i></i>Paypal</span></label>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required id="cnumber">
+							<i class='bx bx-credit-card icon'></i></i>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<input type="text" placeholder="Enter Name On Card" required class="name" id="cname">
+							<i class='bx bxs-user icon' ></i>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<input type="tel" name="" class="name" placeholder="Card CVC 632" required id="cvc">
+							<i class='bx bx-id-card icon' ></i>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<input type="text" placeholder="Exp Month" required class="name" id="expmonth">
+							<i class='bx bx-calendar icon' aria-hidden="true" ></i>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Exp Year" required class="name" id="expyear">
+							<i class='bx bxs-calendar icon' aria-hidden="true" ></i>
+						</div>
+					</div>
+					<div class="input-group">
+						<div class="input-box">
+							<button type="submit" id="btn_payment">Confirm Payment</button>
+						</div>
+					</div>
+				</section>
+			</form>
+		</div>
+		
+		<div class="wrapper" style="margin-top: 3rem;">
+			<h4>Payment Details</h4>
+			<p class="cardpayment-details">
+				<div id="card-details" style="display: inline-block;">Enter your payment details above</div>
+			</p><br/>
+			<h4>Delivery Details</h4>
+			<p class="delivery-details">
+				<div id="user-details" style="display: inline-block;">Please fill the form to complete order</div>
+				<a href="#" id="form-link"><font color="#DAA520" style="text-decoration:underline;" >Edit Details</font></a>
+			</p>
+
+		<!----edit details form---->
+			<form id="delivery-details" style="display: none;" method="get">
+				<h4 class="form-title">Delivery Details</h4>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="text" placeholder="First Name" required class="name" id="fname">
+						<i class='bx bx-user icon'></i>
+					</div>
+					<div class="input-box">
+						<input type="text" placeholder="Last Name" required class="name" id="lname">
+						
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="contact" placeholder="Contact No." required class="name" id="contact">
+						<i class='bx bx-phone-call icon' ></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="email" placeholder="Email Address" required class="name" id="email">
+						<i class='bx bx-envelope icon' ></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="text" placeholder="Address" required class="name" id="address">
+						<i class='bx bx-map icon'></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="text" placeholder="City" required class="name" id="city">
+						<i class='bx bx-buildings icon' ></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<select placeholder="Province" id="province" required class="name">
+							<option value="" disabled selected style="display:none;">Province</option>
+							<option value="western">Western Province</option>
+							<option value="eastern">Eastern Province</option>
+							<option value="southern">Southern Province</option>
+							<option value="nothern">Northern Province</option>
+							<option value="north-western">North Western Province</option>
+							<option value="north-central">North Central Province</option>
+							<option value="uva">Uva Province</option>
+							<option value="sabaragamuwa">Sabaragamuwa Province</option>
+							<option value="central">Central Province</option>
+						  </select>
+						<i class='bx bxs-map-alt icon' ></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<input type="text" placeholder="Landmark(Optional)" class="name" id="landmark">
+						<i class='bx bx-buildings icon' ></i>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<h4 class="form-title">Date Of Birth</h4>
+						<input type="text" placeholder="DD" required class="dob" id="day">
+						<input type="text" placeholder="MM" required class="dob" id="month">
+						<input type="text" placeholder="YYYY" required class="dob" id="year">
+					</div>
+					<div class="input-box">
+						<h4 class="form-title">Gender</h4>
+						<input type="radio" name="gender" class="radio" id="male" checked>
+						<label for="male">Male</label>
+						<input type="radio" name="gender" class="radio" id="female">
+						<label for="female">Female</label>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<button type="submit" id="btn_change">SUBMIT CHANGES</button>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<button type="reset" id="btn_reset">RESET CHANGES</button>
+					</div>
+				</div>
+				<i class='bx bx-x' id="close-form"></i>
+			</form>
+			
+			<div class="input-group">
+				<div class="input-box">
+					<button type="submit" id="confirm-btn" class="placeOrder">Confirm Purchase</button>
+					<span class="overlay"></span>
+				</div>
+			</div>
+			
+			<!--pop up window-->
+			<section class="popup">
+			<div class="modal-box">
+				<i class="fa-regular fa-circle-check"></i>
+				<h2>Completed</h2>
+				<h3>You have sucessfully downloaded all the source code files.</h3>
+
+				<div class="buttons">
+				  <button class="close-btn">Ok, Close</button>
+				</div>
+			</div>
+			</section>			
+		</div>
+	</main>
+	<script>
+		const formBilling = document.getElementById("delivery-details");
+		const billingOverlay = document.createElement("div");
+		billingOverlay.id = "billing-overlay";
+
+		if(document.readyState == "loading"){
+			document.addEventListener("DOMContentLoaded", ready);
+		}else {
+			ready();  
+		}
+
+
+		function ready(){
+			loadCart();
+			billingOverlay.id = "billing-overlay";
+			const formLink = document.getElementById("form-link");
+			const form = document.getElementById('delivery-details');
+			var closeForm = document.getElementById("close-form");
+			const formPayment = document.getElementById("form-payment");
+
+			formLink.addEventListener("click", billingLinkClicked);
+			billingOverlay.addEventListener("click", overlayClicked);
+			form.addEventListener('submit', formSubmitted);
+			form.addEventListener("reset", formReseted)
+			closeForm.addEventListener("click", formClosed)
+			formPayment.addEventListener("submit", formPaymentSubmitted)
+		  
+		}
+
+
+		function formClosed(event){
+			billingOverlay.classList.remove("show");
+			document.body.removeChild(billingOverlay);
+			formBilling.style.display = "none";
+		}
+
+		function loadCart(){
+			var cartCount = document.getElementById("cart-count");
+			var subTotal = document.getElementById("sub-total");
+			var deliFee = document.getElementById("deli-fee");
+			var total = 0;
+			cartCount.innerHTML = localStorage.getItem("itemCount");
+			subTotal.innerHTML = localStorage.getItem("totalBill");
+			var Fee = parseFloat(deliFee.innerText.replace("$", ""));
+			var Sub = parseFloat(subTotal.innerText.replace("$", ""));
+			total = Sub + Fee;
+			total = Math.round(total * 100)/100;
+			console.log(total)
+			document.getElementById("bill-amount").innerText = "$"+total;
+		}   
+
+
+
+		function billingLinkClicked(event) {
+			event.preventDefault();
+			
+			billingOverlay.classList.add("show");
+			document.body.appendChild(billingOverlay);
+			billingOverlay.appendChild(formBilling);
+			
+			formBilling.style.display = "block";
+		}
+
+
+
+		function overlayClicked(event) {
+			if (event.target === billingOverlay) {
+			  billingOverlay.classList.remove("show");
+			  document.body.removeChild(billingOverlay);
+			  formBilling.style.display = "none";
+			}
+		}
+
+		function formPaymentSubmitted(event){
+			const formPayment = document.getElementById("form-payment");
+			
+			const cardNumber = formPayment.querySelector("#cnumber")
+			const cardName = formPayment.querySelector("#cname")
+			const cvc = formPayment.querySelector("#cvc")
+			const expMonth = formPayment.querySelector("#expmonth")
+			const expYear = formPayment.querySelector("#expyear")
+
+			const monthValue = parseInt(expMonth.value.trim());
+			const yearValue = parseInt(expYear.value.trim());
+
+			event.preventDefault();
+
+			if (cardNumber.value.trim() === '') {
+				alert('Please enter your card number.');
+				cardNumber.focus();
+				return;
+			}
+
+			if (cardName.value.trim() === '') {
+				alert('Please enter your name on your card.');
+				cardName.focus();
+				return;
+			}
+
+			if (cvc.value.trim() === '') {
+				alert('Please enter your cvc.');
+				cvc.focus();
+				return;
+			}
+
+			if (expMonth.value.trim() === '') {
+				alert('Please enter your epxiration month.');
+				expMonth.focus();
+				return;
+			}else if (isNaN(monthValue)) {
+				alert('Please enter valid numbers for expiration month.');
+				return;
+			}else if (monthValue < 1 || monthValue > 12 ) {
+				alert('Please enter a valid month.');
+				return;
+			}
+
+			if (expYear.value.trim() === '') {
+				alert('Please enter your espiration year.');
+				expYear.focus();
+				return;
+			}else if (isNaN(yearValue)) {
+				alert('Please enter valid numbers for expiration year.');
+				return;
+			}
+
+			var cardDetails = cardName.value + " | " + cardNumber.value + " | " + expMonth.value + "/" + expYear.value;
+			document.getElementById("card-details").innerText = cardDetails;
+			console.log(cardDetails)
+			formPayment.reset();
+		}
+
+		function formSubmitted(event) {
+			const form = document.getElementById('delivery-details');
+
+			const firstName = form.querySelector('#fname');
+			const lastName = form.querySelector('#lname');
+			const contactNo = form.querySelector('#contact');
+			const email = form.querySelector('#email');
+			const address = form.querySelector('#address');
+			const city = form.querySelector('#city');
+			const province = form.querySelector('#province');
+			const day = form.querySelector('#day');
+			const month = form.querySelector('#month');
+			const year = form.querySelector('#year');
+
+			const contactValue = parseInt(contactNo.value.trim());
+			const dayValue = parseInt(day.value.trim());
+			const monthValue = parseInt(month.value.trim());
+			const yearValue = parseInt(year.value.trim());
+
+			event.preventDefault();
+
+			if (firstName.value.trim() === '') {
+				alert('Please enter your first name.');
+				firstName.focus();
+				return;
+			}
+
+			if (lastName.value.trim() === '') {
+				alert('Please enter your last name.');
+				lastName.focus();
+				return;
+			}
+
+			if (contactNo.value.trim() === '') {
+				alert('Please enter your contact number.');
+				contactNo.focus();
+				return;
+			}else if(isNaN(contactValue)){
+				alert('Please enter a valid contact number.');
+				return;
+			}
+
+			if (email.value.trim() === '') {
+				alert('Please enter your email address.');
+				email.focus();
+				return;
+			}
+
+			if (address.value.trim() === '') {
+				alert('Please enter your address.');
+				address.focus();
+				return;
+			}
+
+			if (city.value.trim() === '') {
+				alert('Please enter your city.');
+				city.focus();
+				return;
+			}
+
+			if (province.value.trim() === '') {
+				alert('Please select your province.');
+				province.focus();
+				return;
+			}
+
+			if (day.value.trim() === '' || month.value.trim() === '' || year.value.trim() === '') {
+				alert('Please enter your date of birth.');
+				day.focus();
+				return;
+			}else if (isNaN(dayValue) || isNaN(monthValue) || isNaN(yearValue)) {
+				alert('Please enter valid numbers for day, month, and year.');
+				return;
+			}else if (dayValue < 1 || dayValue > 31 || monthValue < 1 || monthValue > 12 || yearValue < 1900 || yearValue > 2023) {
+				alert('Please enter a valid date of birth.');
+				return;
+			}
+
+			
+
+			var userDetails = firstName.value + " " + lastName.value + " \n " + address.value + " \n " + contactNo.value;
+			document.getElementById("user-details").innerText = userDetails;
+			console.log(userDetails)
+			form.reset();
+		}
+
+		function formReseted(event){
+			const form = document.getElementById('delivery-details');
+
+			form.reset();
+		}
+		
+		//popup window
+		const section = document.querySelector(".popup"),
+			overlay = document.querySelector(".overlay"),
+			showBtn = document.querySelector(".placeOrder"),
+			closeBtn = document.querySelector(".close-btn");
+
+		  showBtn.addEventListener("click", () => section.classList.add("active"));
+
+		  overlay.addEventListener("click", () =>
+			section.classList.remove("active")
+		  );
+
+		  closeBtn.addEventListener("click", () =>
+			section.classList.remove("active")
+		  );
+	</script>
+</body>
+</html>

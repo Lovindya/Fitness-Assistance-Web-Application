@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FitDynasty - Products</title>
+    <link rel="stylesheet" href="pStyle.css">
+    <link rel="stylesheet" href="/stud 2 styles/naviBar.css">
+    <link rel="stylesheet" href="/stud 2 styles/footer.css">
+	<link rel="stylesheet" href="D:\RGU\web tech\CW\cw\std3\main\menu.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	
+  </head>
+  <body>
+  <!--menu start-->
+	<header>
+        <nav class="main-menu">
+            <!-- to add the logo-->
+            <img src="LOGO (2).png">
+            <div clas="nav-links"> 
+                <ul>
+                    <li><a href="/Main Pg/main.html">HOME</a></li>
+                    <li><a href="/QuizPg/quiz.html">QUIZ</a></li>
+                    <li><a href="/galleryPg/gallery.html">GALLERY</a></li>
+                    <li><a href="/product pg/product pg.html">PRODUCTS</a></li>
+                    <li><a href="">LEADERBOARD</a></li>
+                    <li></li>
+                    <button class ="signup">Sign Up</button>
+					<li></li><li></li>
+					<i class="bx bx-shopping-bag" id="cart-icon"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <div class="cart-content">
+                        </div>
+                        <div class="total">
+                            <div class="total-title">Total</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <button type="button" class="btn-buy">Checkout</button>
+                        <i class='bx bx-x' id="close-cart"></i> 
+                    </div>
+                </ul>
+            </div>
+        </nav>        
+    </header>
+	<!--menu end-->
+	
+    <main>
+	<section  class="product"id="container">
+	  <h1 class="topic">Our Products</h1><br/>
+	  
+	  <button type="button" class="size-btn" onclick="changeSizeBybtn(10)"> - </button> 
+	  <font color="white" size="4px" style="padding-left:10px; padding-right:10px;">font size</font> 
+	  <button type="button" class="size-btn" onclick="changeSizeByBtn(20)"> + </button><br/><br/>
+	  
+	  <nav class="product-menu">
+		  <ul>
+			<li><a href="#section1"><font size="3px">Supplements</font></a></li>
+			<li><a href="#section2"><font size="3px">Fitness Equipments</font></a></li>
+			<li><a href="#section3"><font size="3px">Apparel</font></a></li>
+		  </ul>
+	  </nav>
+	  <div>
+		<div class="Supplements" id="section1">
+            <h3>Supplements</h3><br/>
+            <p>We stock a range of high-quality supplements to support your fitness journey, including protein powders, pre-workout supplements, and vitamins.</p>               	
+			<div>
+				<div class="row">
+					
+					<div id="sup1-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "supplement1.png" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                           
+                            <h6 class = "product-name">MUSCLEPHARM CREATINE 300G</h6>
+                            <p class = "product-price">LKR 5,000.00</p>
+                        </div>
+					</div>
+					
+					<div id="sup2-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "supplement2.jpg" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                            
+                            <h6 class = "product-name">BIOTECH 100% PURE WHEY 2 LBS</h6>
+                            <p class = "product-price">LKR 14,000.00</p>
+                        </div>
+					</div>
+					
+					<div id="sup3-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "supplement3.jpg" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                            
+                            <h6 class = "product-name">MUSCLETECH MASSTECH 7 LBS</h6>
+                            <p class = "product-price">LKR 19,500.00</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="Fitness-Equipments" id="section2">
+            <h3>Fitness Equipments</h3><br/>
+            <p>Whether you're looking to outfit your home gym or need equipment for a commercial gym, we've got you covered.</p>
+			<div>
+				<div class="row">
+				
+					<div id="FE1-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "FE1.jpg" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                            
+                            <h6 class = "product-name">3 FOLD EXERCISE MAT (1’S)</h6>
+                            <p class = "product-price">LKR 8,900.00</p>
+                        </div>
+					</div>
+					
+					<div id="FE2-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "FE2.jpg" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                            
+                            <h6 class = "product-name">DUMBBELL PACK IRON SET</h6>
+                            <p class = "product-price">LKR 15,900.00</p>
+                        </div>
+					</div>
+					<div id="FE3-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "FE3.jpg" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                           
+                            <h6 class = "product-name">COMMERCIAL TREADMILL</h6>
+                            <p class = "product-price">LKR 525,000</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="Apparel" id="section3">
+            <h3>Apparel</h3><br/>
+            <p>We stock a variety of fitness apparel, from workout clothes to athletic shoes, to help you feel and look your best during your workouts.</p>
+			<div>
+				<div class="row">
+					<div id="A1-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "Apparel1.png" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                           
+                            <h6 class = "product-name">NUTRITION PREMIUM ZIPPER HOODIE</h6>
+                            <p class = "product-price">LKR 6000.00</p>
+                        </div>
+					</div>
+					<div id="A2-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "Apparel2.png" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                            
+                            <h6 class = "product-name">GASPARI PREMIUM STYLISH BEANIE (BLACK)</h6>
+                            <p class = "product-price">LKR 2000.00</p>
+                        </div>
+					</div>
+					<div id="A3-card" class="product-card">
+						<div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "Apparel3.png" alt = "product image" class="product-image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart" id="add-btn"> add to cart</button>
+								
+                            </div>
+                        </div>
+						<div class = "product-info">                          
+                            <h6 class = "product-name">Gaspary - ATHLETIC-FIT SHORTS</h6>
+                            <p class = "product-price">LKR 4500.00</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+      </div>
+	</section>
+    </main>
+    <footer>
+        <section class="footer">
+            <div class="col-1">
+                <h3>USEFUL LINKS</h3>
+                <a href="/Main Pg/main.html">HOME</a>
+                <a href="/QuizPg/quiz.html">QUIZ</a>
+                <a href="/galleryPg/gallery.html">GALLERY</a>
+                <a href="/product pg/product pg.html">PRODUCTS</a>
+                <a href="/feedbackPg/comment.html">FEEDBACK</a>
+                <a href="/About us pg/aboutUs.html">ABOUT US</a>
+                <a href="">LEADERBOARD</a>
+            </div>
+            <div class="col-2">
+                <h3>NEWSLETTER</h3>
+                <form class="newsletter">
+                    <input type="text" placeholder="Your Email Address"><br>
+                    <button type="submit">SUBSCRIBE NOW</button>
+                </form><br><br>
+                <a href="/stud2Editors pg/Std2_pageEditor.html" class="editor">Page Editor</a> <br>
+                <p>&copy; 2023 FitDynasty Website. All rights reserved</p>
+            </div>
+            <div class="col-3">
+                <h3>CONTACT</h3>
+                <p>57, Ramakrishna Road, <br> Colombo 06, <br> Sri Lanka.</p>
+                <p>+94 766 760 760</p>
+                <div class="icons">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      </ul>
+                </div>
+            </div>    
+        </section>
+    </footer>
+	<script>
+		//for product menu
+		// Smooth scrolling to anchor links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		  anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+			  behavior: 'smooth'
+			});
+		  });
+		});
+
+		// Toggle active class on navigation links
+		let navLinks = document.querySelectorAll('nav ul li a');
+
+		navLinks.forEach(link => {
+		  link.addEventListener('click', function() {
+			navLinks.forEach(link => link.classList.remove('active'));
+			this.classList.add('active');
+		  });
+		});
+		
+		//To change the font size
+		var container=getElementById("container");
+		
+		function changeSizeByBtn(size){
+		container.style.fontSize=size+"px";
+		}
+
+
+	</script>
+	<script src="js/app.js"></script>
+  </body>
+</html>
