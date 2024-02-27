@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Healthy Recipe Gallery</title>
+    <link rel="stylesheet" type="text/css" href="/stud 2 styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="/stud 2 styles/naviBar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+
+      .gallery_header{
+          position: relative;
+          min-height: 100%;
+          width: 100%;
+          background: url(gallery_background.jpg);
+          background-size: cover;
+          background-position: center;
+          
+      }
+
+      
+       h1 {
+        text-align: center;
+      }
+
+            .container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 100px;
+        
+      }
+
+      .gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .main-image {
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .main-image img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      #description {
+      color: white;
+      text-align: center;
+      margin-left: 50px;
+      font-size: 18px;
+      font-weight: 300;
+      width: 300px;
+      line-height: 25px;
+  }
+  
+
+  
+    </style>
+  </head>
+  <body>
+    <section class="gallery_header">
+      <header>
+        <nav>
+            <!-- to add the logo-->
+            <a href="/Main Pg/main.html"><img src="LOGO (2).png"></a>
+            <div clas="nav-links"> 
+              <ul>
+                <li><a href="/Main Pg/main.html">HOME</a></li>
+                <li><a href="/QuizPg/quiz.html">QUIZ</a></li>
+                <li><a href="/galleryPg/gallery.html">GALLERY</a></li>
+                <li><a href="/product pg/product pg.html">PRODUCTS</a></li>
+                <li><a href="">LEADERBOARD</a></li>
+                <li></li>
+                <a href=""><button class="signup">SIGNUP</button></a>
+                <li></li>
+                            
+                            
+              </ul>
+            </div>
+        </nav>
+    </header>
+      <div class="container">
+        <!-- <h1>Healthy Recipe Gallery</h1> -->
+
+        <div class="gallery">
+          <img src="Easy Korean beef1.jpg" alt="Recipe 1" onclick="showImage('Easy Korean beef1.jpg', 'This Easy Korean Beef is comprised of thinly sliced rib eye steak that’s marinated in a sweet and spicy sauce, then seared to perfection. For a complete meal, the whole family will enjoy, serve over rice or noodles with some veggies, like steamed broccoli or cauliflower')">
+          <img src="Banana Almond Protein Smoothie.jpg" alt="Recipe 1" onclick="showImage('Banana Almond Protein Smoothie.jpg', 'This smoothie is seriously delicious and makes for a mean-postworkout shake too. Delivering 21 grams of protein, it helps to repair micro-tears in your muscles to get you ready for your next gym session.')">
+          <img src="Apple and Great Grains Shake.jpg" alt="Recipe 1" onclick="showImage('Apple and Great Grains Shake.jpg', 'This shake tastes like apple pie in a glass, but you won not find 58 grams of protein in a slice of Grandma’s famous dessert. Most blenders will be able to handle pulverizing an apple, St. Pierre says. Leave the apple skin on for extra phytonutrients.')">
+          <img src="spicy shrimp and avocado salad.jpg" alt="Recipe 1" onclick="showImage('spicy shrimp and avocado salad.jpg', 'This easy shrimp and avocado recipe is so good. It’s loaded with protein and filled with bright flavors that almost anyone will love. Boiled eggs, fresh red onion, leafy spinach, corn, tomatoes and even more encompass this spicy salad. If you have a thing for salads, then you’ll really adore this spicy shrimp salad recipe.')">
+          <img src="vegan chocolate chip cookies.jpg" alt="Recipe 1" onclick="showImage('vegan chocolate chip cookies.jpg', 'These vegan chocolate chip cookies are a tasty and cruelty-free dessert option that can be enjoyed by all. Vegan cookies are similar in texture and taste to traditional chocolate chip cookies but they are made with dairy-free products like dairy-free chocolate chips, and no eggs. It is a delicious dessert option for those who are following the vegan diet or for those who just prefer a plant-based alternative.')">
+          <img src="Chicken Enchilada Soup1.jpg" alt="Recipe 1" onclick="showImage('Chicken Enchilada Soup1.jpg', 'Enchilada soup is one of the most flavorful soup recipes that are not only filling and comforting, but it is also full of flavor and a crowd pleasing soup recipe that will put a smile on everyone’s face. They are loaded with beans, chicken and all the Tex-Mex flavors you love all in one delicious bowl of soup. This easy to make Creamy Chicken Enchilada soup is perfect for any night of the week especially on a busy weeknight when you just need dinner ready in no time.')">
+        </div>
+
+        <div class="main-image">
+          <img id="large-image" src="Easy Korean beef1.jpg" alt="">
+          <p id="description">This Easy Korean Beef is comprised of thinly sliced rib eye steak that’s marinated in a sweet and spicy sauce, then seared to perfection. For a complete meal, the whole family will enjoy, serve over rice or noodles with some veggies, like steamed broccoli or cauliflower.</p>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="col-1">
+        <h3>USEFUL LINKS</h3>
+        <a href="/Main Pg/main.html">HOME</a>
+        <a href="/QuizPg/quiz.html">QUIZ</a>
+        <a href="/galleryPg/gallery.html">GALLERY</a>
+        <a href="/product pg/product pg.html">PRODUCTS</a>
+        <a href="/feedbackPg/comment.html">FEEDBACK</a>
+        <a href="/About us pg/aboutUs.html">ABOUT US</a>
+        <a href="">LEADERBOARD</a>
+      </div>
+      <div class="col-2">
+        <h3>NEWSLETTER</h3>
+        <form class="newsletter">
+          <input type="text" placeholder="Your Email Address"><br>
+          <button type="submit">SUBSCRIBE NOW</button>
+        </form><br><br>
+        <a href="/stud2Editors pg/Std2_pageEditor.html" class="editor">Page Editor</a> <br>
+        <p>&copy; 2023 FitDynasty Website. All rights reserved</p>
+      </div>
+      <div class="col-3">
+        <h3>CONTACT</h3>
+        <p>57, Ramakrishna Road, <br> Colombo 06, <br> Sri Lanka.</p>
+        <p>+94 766 760 760</p>
+        <div class="icons">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+      </div>    
+    </section>
+    <script>
+
+        function showImage(imageSrc, description) {
+        document.getElementById('large-image').src = imageSrc;
+        document.getElementById('description').innerHTML = description;
+
+      }
+    </script>
+  </body>
+</html>
